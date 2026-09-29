@@ -1,104 +1,59 @@
-# Capstone Project 4: AI-Based Recommendation System
+# Content-Based Movie Recommendation System
+
+A machine-learning project that recommends movies with similar content profiles using the **MovieLens Small dataset**, genre features, and cosine similarity.
 
 ## Objective
 
-Build a content-based movie recommendation system that suggests similar movies using machine learning techniques.
-
----
-
-## Business Problem
-
-Streaming platforms offer thousands of movies, making it difficult for users to discover content they may enjoy.
-
-A recommendation system improves user experience by suggesting similar movies based on their genres.
-
----
+Build an interpretable recommendation pipeline that can return movies similar to a selected title based on genre information.
 
 ## Dataset
 
-**MovieLens Small Dataset**
+The project uses the **MovieLens Small Dataset**, including:
 
-Files Used:
+- `movies.csv`
+- `ratings.csv`
 
-* movies.csv
-* ratings.csv
+## Method
 
----
+The recommendation workflow is:
 
-## Project Workflow
+1. Load and inspect the movie data
+2. Prepare genre information
+3. Convert movie genres into numerical vectors using **CountVectorizer**
+4. Compute pairwise similarity using **cosine similarity**
+5. Rank movies by similarity to the selected title
+6. Return the most relevant recommendations
 
-1. Data Collection
-2. Data Preparation
-3. Pattern Learning
-4. Recommendation Logic
-5. Evaluation
-6. Business Insights
+## Core Techniques
 
----
+- Content-based recommendation
+- Text/vector feature representation
+- CountVectorizer
+- Cosine similarity
+- Ranking and retrieval
 
-## Pattern Learning
+## Example
 
-Movie genres are converted into numerical features using **CountVectorizer**.
+**Input:** `Toy Story (1995)`
 
-Cosine Similarity is then used to measure similarity between movies.
+**Output:** movies with similar genre characteristics, particularly animated and family-oriented titles.
 
----
+## Why This Project Matters
 
-## Recommendation Logic
+Recommendation systems are widely used in streaming, e-commerce, news, and content platforms. This project demonstrates the core idea behind content-based retrieval in a simple and interpretable form.
 
-The recommendation engine suggests movies that have similar genre patterns to the selected movie.
+## Tech Stack
 
-Example:
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Jupyter Notebook
 
-* Input: Toy Story (1995)
-* Output: Similar animated and family movies
-
----
-
-## Evaluation Strategy
-
-The recommendation system is evaluated by checking whether the recommended movies belong to similar genres and provide meaningful recommendations.
-
----
-
-## Business Insights
-
-This recommendation system can help businesses:
-
-* Improve customer experience
-* Increase user engagement
-* Increase watch time
-* Improve content discovery
-* Support personalized recommendations
-
----
-
-## Skills Demonstrated
-
-* Content-Based Recommendation System
-* CountVectorizer
-* Cosine Similarity
-* Pattern Learning
-* Data Analysis
-* Business Problem Solving
-
----
-
-## Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Jupyter Notebook
-
----
-
-## Project Structure
+## Repository Structure
 
 ```text
 04-AI-Based-Recommendation-System/
-
 ├── data/
 ├── images/
 ├── notebooks/
@@ -110,21 +65,30 @@ This recommendation system can help businesses:
 └── .gitignore
 ```
 
----
+## Skills Demonstrated
+
+- Recommendation systems
+- Feature representation
+- Similarity-based retrieval
+- Data preprocessing
+- Machine-learning workflow design
+- Business-oriented problem framing
+
+## Limitations
+
+The current system is content-based and primarily relies on genre information. It does not yet learn individual user preferences from interaction history.
 
 ## Future Improvements
 
-* Collaborative Filtering
-* Hybrid Recommendation System
-* Deep Learning-Based Recommendation Models
-* Real-Time Recommendation API
+- Collaborative filtering
+- Matrix factorization
+- Hybrid recommendation
+- User-personalized ranking
+- Richer metadata such as tags and descriptions
+- Offline recommendation metrics
+- Recommendation API or interactive interface
 
 ---
 
-## Author
-
-**Manan Paliwal**
-
-AI & Machine Learning Student
-
-Birla Institute of Technology, Mesra
+**Author:** Manan Paliwal  
+B.Tech Computer Science Engineering — Artificial Intelligence & Machine Learning
